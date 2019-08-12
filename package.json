@@ -1,5 +1,5 @@
 {
-  "name": "expensify",
+  "name": "expentour",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -17,7 +17,7 @@
     "------------------------": "---------------------"
   },
   "author": "GOXR3PLUS STUDIO",
-  "license": "ISC",
+  "license": "GNU 3",
   "description": "",
   "dependencies": {
     "@babel/core": "^7.5.5",
