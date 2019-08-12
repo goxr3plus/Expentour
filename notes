@@ -1,0 +1,175 @@
+
+----------------------------------------------- LIVE SERVER INSTALL + RUN --------------------------------------------------------------------
+-- Install Live Server Globally --
+npm install -g live-server
+
+--- How to run Live Server on a specific folder (public) ---
+>live-server public
+
+----------------------------------------------- BABEL  INSTALL --------------------------------------------------------------------
+
+-- Install Babel stuff---
+npm i  babel-preset-env@1.5.2  babel-cli@6.24.1  babel-preset-react@6.24.1
+ 
+----------------------------------------------- BABEL  RUN --------------------------------------------------------------------
+
+-- Babel build app.js on the specific output folder and every time a change happens rebuild --
+>babel  src/app.js --out-file=public/scripts/app.js --presets=env,react --watch   
+
+-- For apps folder
+> babel  src/apps/x.js --out-file=public/scripts/app.js --presets=env,react --watch
+
+-- For playground folder
+> babel  src/playground/y.js --out-file=public/scripts/app.js --presets=env,react --watch
+
+
+----------------------------------------------- ETC --------------------------------------------------------------------
+
+-- Trigger ComponentWillUnmout manually
+ ReactDOM.render(React.createElement("p"),document.getElementById("app"))
+
+-- Visual Studio Code Shortcuts Templates --
+rcc
+rconst
+
+--Something from Java ignore
+-Djxbrowser.logging.level=ALL
+
+
+
+
+
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-env": "^1.5.2",
+    "babel-preset-react": "^6.24.1",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--OLD VALUES --
+
+AppFullName: Lotos 10 SEPA Adaptor
+AppName: sepa-adaptor
+BusyBoxImage: busybox
+BusyBoxPath: lotos10
+ContainerPort: "8080"
+Domain: app.osedev.l10.intralot.com
+FtpBit8Host: 10.70.5.187
+FtpBit8Password: 123456q!
+FtpBit8Port: 11121
+FtpBit8User: l10_ats
+FtpInboundBit8LocalDirectory: /sepa/data/bit8-in
+FtpInboundSepaCronExpression: 0 0 9,16 * * MON-FRI
+FtpInboundSepaLocalDirectory: /sepa/data/sepa-in
+FtpInboundSepaRemoteDirectory: /ftp-lh-sepa-in
+FtpInboundSepaRemoteSuffix: .txt
+FtpOutboundSepaLocalDirectory: /sepa/data/sepa-out
+FtpOutboundSepaRemoteDirectory: ftp-lh-sepa-out
+FtpSepaHost: 10.70.5.187
+FtpSepaPassword: 123456q!
+FtpSepaPort: 11121
+FtpSepaUser: l10_ats
+ImageName: sepa-adaptor
+ImagePullPolicy: IfNotPresent
+ImageServer: ilotregistry.intralot.com
+ImageTagPrefix: SEPA
+ImageVersion: 1.5.0.0-10
+IngressName: sepa-adaptor
+JavaOpts: -Xms1024m -Xmx1024m
+MaxScale: "10"
+MemoryLimit: 2Gi
+MemoryRequest: 256Mi
+MySqlPassword: l10
+MySqlUrl: jdbc:mysql://mysql/l10_lh?useUnicode=true&characterEncoding=UTF-8&useSSL=false&rewriteBatchedStatements=true
+MySqlUserName: l10
+NodeSelector: '{ node-role.kubernetes.io/compute: ''true'' }'
+Project: lotos10
+Replicas: "1"
+ScaleFactor: "1"
+StackSize: 800m
+StorageLocation: nfs.pat.l10.intralot.com
+StoragePath: /f1/nfs
+StorageSize: 8Gi
+StorageType: nfs
+
+
+
+
+--NEW VALUES--
+
+AppFullName: Lotos 10 SEPA Adaptor
+AppName: sepa-adaptor
+BusyBoxImage: busybox
+BusyBoxPath: lotos10
+ContainerPort: "8080"
+Domain: app.osedev.l10.intralot.com
+FtpBit8Host: 10.70.5.187
+FtpBit8Password: 123456q!
+FtpBit8Port: 11121
+FtpBit8User: l10_ats
+FtpInboundBit8LocalDirectory: /sepa/data/bit8-in
+FtpInboundSepaCronExpression: 0 0 9,16 * * MON-FRI
+FtpInboundSepaLocalDirectory: /sepa/data/sepa-in
+FtpInboundSepaRemoteDirectory: /ftp-lh-sepa-in
+FtpInboundSepaRemoteSuffix: .txt
+FtpOutboundSepaLocalDirectory: /sepa/data/sepa-out
+FtpOutboundSepaRemoteDirectory: ftp-lh-sepa-out
+FtpSepaHost: 10.70.5.187
+FtpSepaPassword: 123456q!
+FtpSepaPort: 11121
+FtpSepaUser: l10_ats
+ImageName: sepa-adaptor
+ImagePullPolicy: IfNotPresent
+ImageServer: ilotregistry.intralot.com
+ImageTagPrefix: SEPA
+ImageVersion: 1.5.0.0-10
+IngressName: sepa-adaptor
+JavaOpts: -Xms1024m -Xmx1024m
+MaxScale: "10"
+MemoryLimit: 2Gi
+MemoryRequest: 256Mi
+MySqlPassword: l10
+MySqlUrl: jdbc:mysql://mysql/l10_lh?useUnicode=true&characterEncoding=UTF-8&useSSL=false&rewriteBatchedStatements=true
+MySqlUserName: l10
+NodeSelector: '{ node-role.kubernetes.io/compute: ''true'' }'
+Project: lotos10
+Replicas: "1"
+ScaleFactor: "1"
+StackSize: 800m
+StorageLocation: nfs.pat.l10.intralot.com
+StoragePath: /f1/nfs
+StorageSize: 8Gi
+StorageType: nfs

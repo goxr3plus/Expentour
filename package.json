@@ -1,0 +1,47 @@
+{
+  "name": "expensify",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "---------Generic-------": "---------------------",
+    "run-p": "npm-run-all -p ",
+    "babel-build": "babel src/app.js --out-file=public/scripts/app.js --presets=@babel/env,@babel/react --watch",
+    "----------Live Server--------": "----------------------",
+    "build": "webpack --watch",
+    "serve": "live-server public/",
+    "start-with-live-server": "run-p serve build",
+    "----------Pure WebPack-----": "---------------------",
+    "web-build": "webpack",
+    "dev-server": "webpack-dev-server",
+    "start": "run-p dev-server web-build",
+    "------------------------": "---------------------"
+  },
+  "author": "GOXR3PLUS STUDIO",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.2.0",
+    "node-sass": "^4.12.0",
+    "normalize.css": "^8.0.1",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-modal": "^3.9.1",
+    "react-router-dom": "^5.0.1",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^1.0.0",
+    "validator": "^11.1.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "live-server": "^1.2.1",
+    "npm-run-all": "^4.1.5",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.7.2"
+  }
+}
