@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 const HelpPage = props => (
   <div>
-    <p> 404 - Not Found</p>
-    <Link to="/">Go Home</Link>
+    <p> Help me Daddy</p>
+   
   </div>
 );
 
