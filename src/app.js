@@ -27,8 +27,8 @@ const jsx = (
   </Provider>
 );
 
-console.log(
-  getVisibleExpenses(store.getState().expenses, store.getState().filters)
-);
+// console.log(
+//   getVisibleExpenses(store.getState().expenses, store.getState().filters)
+// );
 
 ReactDOM.render(jsx, document.getElementById("app"));

@@ -85,7 +85,7 @@ const store = createStore(
 const unsubscribe = store.subscribe(() => {
   const state = store.getState();
   const visibleExpenses = getVisibleExpenses(state.expenses, state.filters);
-  console.log(visibleExpenses);
+  // console.log(visibleExpenses);
 });
 
 unsubscribe();
@@ -161,7 +161,7 @@ const getVisibleExpenses = (expenses, { text, sortBy, startDate, endDate }) => {
 
 //----------------------------Dispatching-----------------------------------------------
 
-console.log("-------Adding expenses : ");
+// console.log("-------Adding expenses : ");
 
 const expense1 = store.dispatch(
   addExpense({ description: "Rent", amount: 100, createdAt: 1002 })
@@ -187,7 +187,7 @@ const expense3 = store.dispatch(
 
 //////
 
-console.log("-------Editing TextFilter-------");
+// console.log("-------Editing TextFilter-------");
 store.dispatch(setFilterText(""));
 
 store.dispatch(sortByDate());
@@ -198,6 +198,6 @@ store.dispatch(setStartDate());
 
 store.dispatch(setEndDate(1250));
 
-console.log(
-  getVisibleExpenses(store.getState().expenses, store.getState().filters)
-);
+// console.log(
+//   getVisibleExpenses(store.getState().expenses, store.getState().filters)
+// );

@@ -8,7 +8,7 @@ import HelpPage from "./../components/HelpPage";
 import NotFoundPage from "./../components/NotFoundPage";
 
 const AppRouter = () => (
-  <React.StrictMode>
+  // <React.StrictMode>
     <BrowserRouter>
       <div>
         <Header />
@@ -21,7 +21,7 @@ const AppRouter = () => (
         </Switch>
       </div>
     </BrowserRouter>
-  </React.StrictMode>
+  // </React.StrictMode>
 );
 
 export default AppRouter;

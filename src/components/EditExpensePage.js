@@ -1,7 +1,7 @@
 import React from "react";
 
 const EditExpensePage = props => {
-  console.log(props);
+  // console.log(props);
   return (
     <div>
       <button onClick={e => props.history.goBack()}>Back</button>
