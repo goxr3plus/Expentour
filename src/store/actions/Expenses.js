@@ -4,7 +4,7 @@ import uuid from "uuid";
 export const addExpense = ({
   description = "",
   note = "",
-  amount = "",
+  amount = 0,
   createdAt = 0
 } = {}) => ({
   type: ActionTypes.ADD_EXPENSE,

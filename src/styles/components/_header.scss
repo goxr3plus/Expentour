@@ -1,0 +1,24 @@
+.header {
+  background: white;
+  margin-bottom: 20px;
+}
+
+.header__title {
+  background: deeppink;
+  font-weight: bold;
+}
+
+.header__link:link,
+.header__link:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.header__link:hover,
+.header__link:active {
+  background-color: red;
+}

@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 const HelpPage = props => (
   <div>
     <p> Help me Daddy</p>
-   
   </div>
 );
 

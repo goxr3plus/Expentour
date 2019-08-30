@@ -1,7 +1,7 @@
 const path = require("path");
 
 module.exports = {
-  mode: "development",
+  mode: "development",   //mode [development,production,...]
   entry: "./src/app.js", //which file to use as entry
   output: {
     path: path.join(__dirname, "public"),
