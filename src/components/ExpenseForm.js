@@ -5,13 +5,17 @@ import { SingleDatePicker } from "react-dates";
 import "react-dates/lib/css/_datepicker.css";
 
 export default class ExpenseForm extends Component {
-  state = {
-    description: "",
-    note: "",
-    amount: "",
-    createdAt: moment(),
-    calendarFocused: false
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      description: "",
+      note: "",
+      amount: "",
+      createdAt: moment(),
+      calendarFocused: false,
+      error: ""
+    };
+  }
 
   //----------------------- METHODS---------------------------------------
 
@@ -30,25 +34,44 @@ export default class ExpenseForm extends Component {
     const amount = e.target.value;
 
     //https://regex101.com
-    if (amount.match(/^\d*(\.\d{0,2})?$/)) {
+    if (!amount || amount.match(/^\d{1,}(\.\d{0,2})?$/)) {
       this.setState(() => ({ amount }));
     }
   };
 
   onDateChange = createdAt => {
-    this.setState(() => ({ createdAt }));
+    if (createdAt) this.setState(() => ({ createdAt }));
   };
 
   onFocusChange = ({ focused }) => {
     this.setState(() => ({ calendarFocused: focused }));
   };
 
+  onSubmit = e => {
+    e.preventDefault();
+
+    if (!this.state.description || !this.state.amount) {
+      this.setState(() => ({
+        error: "Please Provide description and amount ."
+      }));
+    } else {
+      this.setState(() => ({ error: "" }));
+      console.log("Submitted!");
+      this.props.onSubmit({
+        description: this.state.description,
+        amount: parseFloat(this.state.amount, 10) * 100,
+        createdAt: this.state.createdAt.valueOf(),
+        note: this.state.description
+      });
+    }
+  };
   //----------------------- METHODS---------------------------------------
 
   render() {
     return (
       <div>
-        <form>
+        {this.state.error && <h4>{this.state.error}</h4>}
+        <form onSubmit={this.onSubmit}>
           <input
             type="text"
             placeholder="description"
