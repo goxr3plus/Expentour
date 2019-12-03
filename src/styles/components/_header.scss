@@ -4,7 +4,7 @@
 }
 
 .header__title {
-  background: deeppink;
+  padding: 3px 3px;
   font-weight: bold;
 }
 
@@ -12,10 +12,19 @@
 .header__link:visited {
   background-color: darkgray;
   color: white;
-  padding: 12px 12px;
+  padding: 15px 15px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-color: transparent;
+}
+
+.header__link:focus {
+  border-color: transparent;
+  outline: none !important;
+  outline-offset: none !important;
 }
 
 .header__link:hover,

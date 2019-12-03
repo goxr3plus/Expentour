@@ -12,9 +12,9 @@ import { Provider } from 'react-redux'
 
 const store = ConfigureStore()
 
-store.dispatch(addExpense({ description: 'water bill', amount: 4500 }))
-store.dispatch(addExpense({ description: 'gas bill', createdAt: 1000 }))
-store.dispatch(addExpense({ description: 'rent bill', amount: 109500 }))
+store.dispatch(addExpense({ description: 'Water bill', amount: 4500 }))
+store.dispatch(addExpense({ description: 'Gas bill', createdAt: 1000 }))
+store.dispatch(addExpense({ description: 'Rent bill', amount: 109500 }))
 store.dispatch(sortByAmount())
 // store.dispatch(setFilterText("water"));
 

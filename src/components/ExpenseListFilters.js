@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { setFilterText, sortByAmount, sortByDate } from '../store/actions/Filters'
-import { Container, Row, Col, Dropdown } from 'react-bootstrap'
+import { Container, Row, Col, Dropdown, FormControl } from 'react-bootstrap'
 
 const ExpenseListFilters = props => {
   const inputChangeListener = e => {
@@ -9,20 +9,26 @@ const ExpenseListFilters = props => {
   }
 
   const orderBy = e => {
-    const val = e.target.value
-    props.dispatch(val === 'amount' ? sortByAmount() : sortByDate())
+    console.log(e)
+    props.dispatch(value === 'amount' ? sortByAmount() : sortByDate())
   }
 
   return (
     <Container>
       <Row>
         <Col>
-          <input type="text" value={props.filters.text} onChange={e => inputChangeListener(e)}></input>
+          <FormControl
+            type="text"
+            value={props.filters.text}
+            placeholder="Search Bills"
+            className="mr-sm-2"
+            onChange={e => inputChangeListener(e)}
+          />
         </Col>
-        <Col>
-          <Dropdown value={props.filters.sortBy} onChange={e => orderBy(e)}>
-            <Dropdown.Toggle variant="success" id="dropdown-basic">
-              Category
+        {/* <Col>
+          <Dropdown value={props.filters.orderBy} onSelect={orderBy}>
+            <Dropdown.Toggle variant="primary" id="dropdown-basic">
+              Order By
             </Dropdown.Toggle>
 
             <Dropdown.Menu>
@@ -30,7 +36,7 @@ const ExpenseListFilters = props => {
               <Dropdown.Item href="#">Amount</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
-        </Col>
+        </Col> */}
       </Row>
     </Container>
   )
