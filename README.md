@@ -7,11 +7,11 @@
 
 # Technologies used 
 
-> Babel        (7.5.5)     [Link](https://github.com/babel/babel)
+> Babel        (7.7.4)     [Link](https://github.com/babel/babel)
 
-> React        (16.9.0)    [Link](https://github.com/facebook/react)
+> React        (16.12)    [Link](https://github.com/facebook/react)
 
-> Webpack      (4.39.1)    [Link](https://github.com/webpack/webpack)
+> Webpack      (4.41)    [Link](https://github.com/webpack/webpack)
 
 > SCSS  (6.0.0)     [Link](https://github.com/sass/sass)
 
