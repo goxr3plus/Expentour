@@ -3,6 +3,7 @@ import moment from 'moment'
 import 'react-dates/initialize'
 import { SingleDatePicker } from 'react-dates'
 import 'react-dates/lib/css/_datepicker.css'
+import { Container, Row, Col, Button, Form, Alert } from 'react-bootstrap'
 
 export default class ExpenseForm extends Component {
   constructor(props) {
@@ -52,7 +53,7 @@ export default class ExpenseForm extends Component {
 
     if (!this.state.description || !this.state.amount) {
       this.setState(() => ({
-        error: 'Please Provide description and amount .'
+        error: 'Please Provide description and amount !'
       }))
     } else {
       this.setState(() => ({ error: '' }))
@@ -69,34 +70,51 @@ export default class ExpenseForm extends Component {
 
   render() {
     return (
-      <div>
-        {this.state.error && <h4>{this.state.error}</h4>}
-        <form onSubmit={this.onSubmit}>
-          <input
-            type="text"
-            placeholder="description"
-            autoFocus
-            value={this.state.description}
-            onChange={e => this.onDescriptionChange(e)}
-          ></input>
-          <input type="text" placeholder="amount" value={this.state.amount} onChange={e => this.onAmountChange(e)}></input>
-          <SingleDatePicker
-            date={this.state.createdAt}
-            onDateChange={this.onDateChange}
-            focused={this.state.calendarFocused}
-            onFocusChange={({ focused }) => this.onFocusChange({ focused })}
-            numberOfMonths={1}
-            isOutsideRange={() => false}
-            id="123456"
-          ></SingleDatePicker>
-          <textarea
-            placeholder="Add a note for your expense (optional)"
-            value={this.state.note}
-            onChange={e => this.onTextAreaChange(e)}
-          ></textarea>
-          <button>Add Expense</button>
-        </form>
-      </div>
+      <Container>
+        <Row>
+          <Col>
+            {this.state.error && (
+              <Alert variant="danger">
+                {' '}
+                <h4>{this.state.error}</h4>
+              </Alert>
+            )}
+          </Col>
+        </Row>
+        <Form>
+          <Form.Group controlId="description">
+            <Form.Label>Description</Form.Label>
+            <Form.Control
+              type="text"
+              placeholder="Enter Description"
+              value={this.state.description}
+              onChange={e => this.onDescriptionChange(e)}
+            />
+          </Form.Group>
+          <Form.Group controlId="notes">
+            <Form.Label>Notes</Form.Label>
+            <Form.Control type="text" placeholder="Enter Description" value={this.state.note} onChange={e => this.onTextAreaChange(e)} />
+          </Form.Group>
+          <Form.Group controlId="amount">
+            <Form.Label>Amount</Form.Label>
+            <Form.Control type="number" placeholder="Enter Description" value={this.state.amount} onChange={e => this.onAmountChange(e)} />
+          </Form.Group>
+          <Form.Group controlId="datePicker">
+            <SingleDatePicker
+              date={this.state.createdAt}
+              onDateChange={this.onDateChange}
+              focused={this.state.calendarFocused}
+              onFocusChange={({ focused }) => this.onFocusChange({ focused })}
+              numberOfMonths={1}
+              isOutsideRange={() => false}
+              id="123456"
+            ></SingleDatePicker>
+          </Form.Group>
+          <Button variant="primary" type="submit" onClick={this.onSubmit}>
+            Submit
+          </Button>
+        </Form>
+      </Container>
     )
   }
 }
