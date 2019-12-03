@@ -29,6 +29,8 @@
 
 > Webpack      (4.41)    [Link](https://github.com/webpack/webpack)
 
+> Bootstrap      (4)    [Link](https://react-bootstrap.github.io/getting-started/introduction/)
+
 > SCSS  (6.0.0)     [Link](https://github.com/sass/sass)
 
 # How to run
