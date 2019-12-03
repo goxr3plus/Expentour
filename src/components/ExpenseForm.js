@@ -72,14 +72,7 @@ export default class ExpenseForm extends Component {
     return (
       <Container>
         <Row>
-          <Col>
-            {this.state.error && (
-              <Alert variant="danger">
-                {' '}
-                <h4>{this.state.error}</h4>
-              </Alert>
-            )}
-          </Col>
+          <Col>{this.state.error && <Alert variant="danger">{this.state.error}</Alert>}</Col>
         </Row>
         <Form>
           <Form.Group controlId="description">
@@ -100,6 +93,8 @@ export default class ExpenseForm extends Component {
             <Form.Control type="number" placeholder="Enter Description" value={this.state.amount} onChange={e => this.onAmountChange(e)} />
           </Form.Group>
           <Form.Group controlId="datePicker">
+            <Form.Label>Date Created</Form.Label>
+            <br></br>
             <SingleDatePicker
               date={this.state.createdAt}
               onDateChange={this.onDateChange}
