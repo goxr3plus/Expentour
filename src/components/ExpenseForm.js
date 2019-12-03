@@ -90,7 +90,7 @@ export default class ExpenseForm extends Component {
           </Form.Group>
           <Form.Group controlId="amount">
             <Form.Label>Amount</Form.Label>
-            <Form.Control type="number" placeholder="Enter Description" value={this.state.amount} onChange={e => this.onAmountChange(e)} />
+            <Form.Control type="number" placeholder="Enter Amount" value={this.state.amount} onChange={e => this.onAmountChange(e)} />
           </Form.Group>
           <Form.Group controlId="datePicker">
             <Form.Label>Date Created</Form.Label>

@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { removeExpense } from '../../playground/redux-expentour'
 import { Link } from 'react-router-dom'
+import { Button } from 'react-bootstrap'
 
 const ExpenseListItem = ({ dispatch, id, description, amount, createdAt }, props) => (
   <div>
@@ -11,13 +12,13 @@ const ExpenseListItem = ({ dispatch, id, description, amount, createdAt }, props
     <p>
       Amount : {amount} , Date : {createdAt}
     </p>
-    <button
+    <Button
       onClick={e => {
         dispatch(removeExpense({ id }))
       }}
     >
-      REMOVE
-    </button>
+      Remove
+    </Button>
   </div>
 )
 

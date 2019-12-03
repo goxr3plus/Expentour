@@ -2,15 +2,23 @@ import React from 'react'
 import { connect } from 'react-redux'
 import ExpenseListItem from './ExpenseListItem'
 import getVisibleExpenses from '../store/selectors/Expenses'
+import { Card, ListGroup } from 'react-bootstrap'
 
 const ExpenseList = props => (
-  <div>
-    <h1> -- Expense List -- </h1>
-    <p> + Filter : {props.filters.text} + </p>
-    {props.expenses.map(expense => {
-      return <ExpenseListItem {...expense} key={expense.id} props={props}></ExpenseListItem>
-    })}
-  </div>
+  <Card style={{ marginLeft: '1%', width: '98%' }}>
+    <Card.Header>
+      <p> Expenses Filter : {props.filters.text} </p>
+    </Card.Header>
+    <ListGroup variant="flush">
+      {props.expenses.map(expense => {
+        return (
+          <ListGroup.Item>
+            <ExpenseListItem {...expense} key={expense.id} props={props}></ExpenseListItem>
+          </ListGroup.Item>
+        )
+      })}
+    </ListGroup>
+  </Card>
 )
 
 const mapStateToProps = state => {
