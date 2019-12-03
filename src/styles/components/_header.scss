@@ -10,9 +10,9 @@
 
 .header__link:link,
 .header__link:visited {
-  background-color: black;
+  background-color: darkgray;
   color: white;
-  padding: 14px 25px;
+  padding: 12px 12px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -20,5 +20,5 @@
 
 .header__link:hover,
 .header__link:active {
-  background-color: red;
+  background-color: firebrick;
 }

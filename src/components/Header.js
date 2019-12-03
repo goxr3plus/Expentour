@@ -10,11 +10,9 @@ const Header = props => (
         Expensify
       </Navbar.Brand>
       <Nav className="mr-auto">
-        <Nav.Link href="#">
-          <NavLink to="/" activeClassName="is-active" className="header__link" exact>
-            Home
-          </NavLink>
-        </Nav.Link>
+        <NavLink to="/" activeClassName="is-active" className="header__link" exact>
+          Home
+        </NavLink>
         <Nav.Link href="#">
           <NavLink to="/create" activeClassName="is-active" className="header__link">
             Create
