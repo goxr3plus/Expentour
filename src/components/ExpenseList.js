@@ -12,7 +12,7 @@ const ExpenseList = props => (
     <ListGroup>
       {props.expenses.map((expense, index) => {
         return (
-          <ListGroup.Item>
+          <ListGroup.Item key={index}>
             <ExpenseListItem key={index} props={props} {...expense}></ExpenseListItem>
           </ListGroup.Item>
         )

@@ -1,11 +1,13 @@
 import React from 'react'
+import { Button, Col, Container, FormControl, InputGroup, Row } from 'react-bootstrap'
 import { connect } from 'react-redux'
+import { withRouter } from 'react-router-dom'
 import { setFilterText, sortByAmount, sortByDate } from '../store/actions/Filters'
-import { Container, Row, Col, Dropdown, FormControl } from 'react-bootstrap'
 
 const ExpenseListFilters = props => {
   const inputChangeListener = e => {
     props.dispatch(setFilterText(e.target.value))
+    props.history.push('/')
   }
 
   const orderBy = e => {
@@ -17,13 +19,25 @@ const ExpenseListFilters = props => {
     <Container>
       <Row>
         <Col>
-          <FormControl
-            type="text"
-            value={props.filters.text}
-            placeholder="Search Bills"
-            className="mr-sm-2"
-            onChange={e => inputChangeListener(e)}
-          />
+          <InputGroup>
+            <FormControl
+              type="text"
+              value={props.filters.text}
+              placeholder="Search Bills"
+              className="mr-sm-2"
+              onChange={e => inputChangeListener(e)}
+            />
+            <InputGroup.Append>
+              <Button
+                variant="danger"
+                onClick={e => {
+                  props.dispatch(setFilterText(''))
+                }}
+              >
+                X
+              </Button>
+            </InputGroup.Append>
+          </InputGroup>
         </Col>
         {/* <Col>
           <Dropdown value={props.filters.orderBy} onSelect={orderBy}>
@@ -48,4 +62,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps)(ExpenseListFilters)
+export default withRouter(connect(mapStateToProps)(ExpenseListFilters))
