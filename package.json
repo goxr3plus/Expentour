@@ -1,4 +1,5 @@
 {
+  "homepage": "https://goxr3plus.github.io/Expentour",
   "name": "expentour",
   "version": "1.0.1",
   "main": "index.js",
@@ -15,6 +16,8 @@
     "dev-server": "webpack-dev-server",
     "start": "run-p dev-server web-build",
     "reinstall": "rm -rf node_modules & npm i",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "------------------------": "---------------------"
   },
   "author": "GOXR3PLUS STUDIO",
@@ -48,6 +51,7 @@
   "devDependencies": {
     "@babel/cli": "^7.7.4",
     "@babel/plugin-proposal-object-rest-spread": "^7.7.4",
+    "gh-pages": "^2.1.1",
     "live-server": "^1.2.1",
     "npm-run-all": "^4.1.5",
     "webpack": "^4.41.2",

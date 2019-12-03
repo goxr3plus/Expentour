@@ -7,7 +7,7 @@ const Header = props => (
   <div>
     <Navbar collapseOnSelect expand="md" bg="dark" variant="dark">
       <Navbar.Brand href="/" className="header__title">
-        Expensify
+        Expentour
       </Navbar.Brand>
       <Form inline className="pull-right">
         <ExpenseListFilters></ExpenseListFilters>
