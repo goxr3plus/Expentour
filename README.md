@@ -1,4 +1,4 @@
-# Calculate your Incomes and Expenses
+# Calculate your Incomes and Expenses 
 
 
 # How it will look like 
