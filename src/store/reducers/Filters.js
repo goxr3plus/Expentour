@@ -1,4 +1,4 @@
-import * as ActionTypes from "../actions/ActionTypes";
+import * as ActionTypes from '../actions/ActionTypes'
 
 //   filters: {
 //     text: "rent",
@@ -7,26 +7,26 @@ import * as ActionTypes from "../actions/ActionTypes";
 //     endDAte: undefined
 //   }
 const filtersReducerDefaultState = {
-  text: "",
-  sortBy: "",
+  text: '',
+  sortBy: '',
   startDate: undefined,
   endDate: undefined
-};
+}
 const filtersReducer = (state = filtersReducerDefaultState, action) => {
   switch (action.type) {
     case ActionTypes.SET_TEXT_FILTER:
-      return { ...state, text: action.text };
+      return { ...state, text: action.text }
     case ActionTypes.SORT_BY_DATE:
-      return { ...state, sortBy: "date" };
+      return { ...state, sortBy: 'date' }
     case ActionTypes.SORT_BY_AMOUNT:
-      return { ...state, sortBy: "amount" };
+      return { ...state, sortBy: 'amount' }
     case ActionTypes.SET_START_DATE:
-      return { ...state, startDate: action.startDate };
+      return { ...state, startDate: action.startDate }
     case ActionTypes.SET_END_DATE:
-      return { ...state, endDate: action.endDate };
+      return { ...state, endDate: action.endDate }
     default:
-      return state;
+      return state
   }
-};
+}
 
-export default filtersReducer;
+export default filtersReducer

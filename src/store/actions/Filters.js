@@ -1,20 +1,20 @@
-import * as ActionTypes from "./ActionTypes";
+import * as ActionTypes from './ActionTypes'
 
 export const setFilterText = text => ({
   type: ActionTypes.SET_TEXT_FILTER,
   text
-});
+})
 
-export const sortByDate = () => ({ type: ActionTypes.SORT_BY_DATE });
+export const sortByDate = () => ({ type: ActionTypes.SORT_BY_DATE })
 
-export const sortByAmount = () => ({ type: ActionTypes.SORT_BY_AMOUNT });
+export const sortByAmount = () => ({ type: ActionTypes.SORT_BY_AMOUNT })
 
 export const setStartDate = startDate => ({
   type: ActionTypes.SET_START_DATE,
   startDate
-});
+})
 
 export const setEndDate = endDate => ({
   type: ActionTypes.SET_END_DATE,
   endDate
-});
+})

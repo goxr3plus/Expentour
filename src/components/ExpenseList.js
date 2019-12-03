@@ -1,24 +1,24 @@
-import React from "react";
-import { connect } from "react-redux";
-import ExpenseListItem from "./ExpenseListItem";
-import getVisibleExpenses from "../store/selectors/Expenses";
+import React from 'react'
+import { connect } from 'react-redux'
+import ExpenseListItem from './ExpenseListItem'
+import getVisibleExpenses from '../store/selectors/Expenses'
 
 const ExpenseList = props => (
   <div>
     <h1> -- Expense List -- </h1>
     <p> + Filter : {props.filters.text} + </p>
     {props.expenses.map(expense => {
-      return <ExpenseListItem {...expense} key={expense.id} props={props}></ExpenseListItem>;
+      return <ExpenseListItem {...expense} key={expense.id} props={props}></ExpenseListItem>
     })}
   </div>
-);
+)
 
 const mapStateToProps = state => {
   return {
-    expenses: getVisibleExpenses(state.expenses,state.filters),
+    expenses: getVisibleExpenses(state.expenses, state.filters),
     filters: state.filters
-  };
-};
+  }
+}
 
 //export component as default
 export default //
@@ -26,4 +26,4 @@ export default //
 connect(mapStateToProps)(
   //connect component to store
   ExpenseList
-);
+)

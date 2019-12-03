@@ -1,4 +1,4 @@
-import * as ActionTypes from "../actions/ActionTypes";
+import * as ActionTypes from '../actions/ActionTypes'
 
 //   expenses: [
 //     {
@@ -9,13 +9,13 @@ import * as ActionTypes from "../actions/ActionTypes";
 //       createdAt: 0
 //     }
 //   ]
-const expensesReducerDefaultState = [];
+const expensesReducerDefaultState = []
 const expensesReducer = (state = expensesReducerDefaultState, action) => {
   switch (action.type) {
     case ActionTypes.ADD_EXPENSE:
-      return [...state, action.expense];
+      return [...state, action.expense]
     case ActionTypes.REMOVE_EXPENSE:
-      return state.filter(({ id }) => id !== action.id);
+      return state.filter(({ id }) => id !== action.id)
     case ActionTypes.EDIT_EXPENSE:
       return state.map(expense => {
         //matching id
@@ -23,16 +23,16 @@ const expensesReducer = (state = expensesReducerDefaultState, action) => {
           return {
             ...expense,
             ...action.updates
-          };
+          }
         }
         //not matching id
         else {
-          return expense;
+          return expense
         }
-      });
+      })
     default:
-      return state;
+      return state
   }
-};
+}
 
-export default expensesReducer;
+export default expensesReducer
