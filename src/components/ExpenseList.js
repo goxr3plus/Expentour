@@ -9,11 +9,11 @@ const ExpenseList = props => (
     <Card.Header>
       <p> Expenses Filter : {props.filters.text} </p>
     </Card.Header>
-    <ListGroup variant="flush">
-      {props.expenses.map(expense => {
+    <ListGroup>
+      {props.expenses.map((expense, index) => {
         return (
           <ListGroup.Item>
-            <ExpenseListItem {...expense} key={expense.id} props={props}></ExpenseListItem>
+            <ExpenseListItem key={index} props={props} {...expense}></ExpenseListItem>
           </ListGroup.Item>
         )
       })}
