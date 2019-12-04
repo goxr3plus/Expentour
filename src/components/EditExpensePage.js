@@ -21,7 +21,7 @@ const EditExpensePage = props => {
         expense={props.expense}
         onSubmit={expense => {
           console.log('New Expense', expense)
-          props.dispatch(editExpense({ id: expense.id, updates: expense }))
+          props.editExpense(expense.id, expense)
           props.history.push('/')
         }}
       ></ExpenseForm>
@@ -37,6 +37,7 @@ const mapStateToProps = (state, props) => {
 
 const mapDispatchToProps = dispatch => {
   return {
+    editExpense: (id, updates) => dispatch(editExpense({ id, updates })),
     deleteExpense: id => dispatch(removeExpense({ id }))
   }
 }
