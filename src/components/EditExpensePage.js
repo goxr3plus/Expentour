@@ -1,13 +1,22 @@
 import React from 'react'
-import { connect } from 'react-redux'
-import ExpenseForm from './ExpenseForm'
 import { Button } from 'react-bootstrap'
-import { editExpense } from '../store/actions/Expenses'
+import { connect } from 'react-redux'
+import { editExpense, removeExpense } from '../store/actions/Expenses'
+import ExpenseForm from './ExpenseForm'
 
 const EditExpensePage = props => {
   return (
     <div>
-      <Button onClick={e => props.history.goBack()}> {'<'} Back</Button>
+      <Button onClick={e => props.history.goBack()}> {'<'} Back</Button>{' '}
+      <Button
+        variant="danger"
+        onClick={e => {
+          props.deleteExpense(props.match.params.id)
+          props.history.push('/')
+        }}
+      >
+        Delete
+      </Button>
       <ExpenseForm
         expense={props.expense}
         onSubmit={expense => {
@@ -26,4 +35,10 @@ const mapStateToProps = (state, props) => {
   }
 }
 
-export default connect(mapStateToProps)(EditExpensePage)
+const mapDispatchToProps = dispatch => {
+  return {
+    deleteExpense: id => dispatch(removeExpense({ id }))
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(EditExpensePage)
