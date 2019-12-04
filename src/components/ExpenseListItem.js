@@ -4,7 +4,7 @@ import { removeExpense } from '../../playground/redux-expentour'
 import { Link } from 'react-router-dom'
 import { Badge, Button } from 'react-bootstrap'
 
-const ExpenseListItem = ({ dispatch, id, description, amount, createdAt }, props) => (
+const ExpenseListItem = ({ dispatch, id, description, amount, note, createdAt }, props) => (
   <div>
     <Badge variant="info">
       <Link to={`/edit/${id}`} style={{ color: 'white' }}>
@@ -12,7 +12,7 @@ const ExpenseListItem = ({ dispatch, id, description, amount, createdAt }, props
       </Link>
     </Badge>
     <p>
-      Amount : {amount} , Date : {createdAt}
+      Amount : {amount} , Date : {createdAt} , Note : {note}
     </p>
     <Button
       onClick={e => {

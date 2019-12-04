@@ -11,7 +11,8 @@ import * as ActionTypes from '../actions/ActionTypes'
 //   ]
 const expensesReducerDefaultState = []
 const expensesReducer = (state = expensesReducerDefaultState, action) => {
-  switch (action.type) {
+  const type = action.type
+  switch (type) {
     case ActionTypes.ADD_EXPENSE:
       return [...state, action.expense]
     case ActionTypes.REMOVE_EXPENSE:
