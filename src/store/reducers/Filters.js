@@ -1,16 +1,11 @@
 import * as ActionTypes from '../actions/ActionTypes'
+import moment from 'moment'
 
-//   filters: {
-//     text: "rent",
-//     sortBy: "amount",
-//     startDate: undefined,
-//     endDAte: undefined
-//   }
 const filtersReducerDefaultState = {
   text: '',
   sortBy: '',
-  startDate: undefined,
-  endDate: undefined
+  startDate: moment().startOf('month'),
+  endDate: moment().endOf('month')
 }
 const filtersReducer = (state = filtersReducerDefaultState, action) => {
   switch (action.type) {

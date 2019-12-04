@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Col, Container, FormControl, InputGroup, Row } from 'react-bootstrap'
+import { Button, Col, Container, FormControl, InputGroup, Row, Dropdown } from 'react-bootstrap'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 import { setFilterText, sortByAmount, sortByDate } from '../store/actions/Filters'
@@ -39,18 +39,22 @@ const ExpenseListFilters = props => {
             </InputGroup.Append>
           </InputGroup>
         </Col>
-        {/* <Col>
+        <Col>
           <Dropdown value={props.filters.orderBy} onSelect={orderBy}>
             <Dropdown.Toggle variant="primary" id="dropdown-basic">
-              Order By
+              Order By ({props.filters.sortBy})
             </Dropdown.Toggle>
 
             <Dropdown.Menu>
-              <Dropdown.Item href="#">Date</Dropdown.Item>
-              <Dropdown.Item href="#">Amount</Dropdown.Item>
+              <Dropdown.Item disabled href="#">
+                Date
+              </Dropdown.Item>
+              <Dropdown.Item disabled href="#">
+                Amount
+              </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
-        </Col> */}
+        </Col>
       </Row>
     </Container>
   )
