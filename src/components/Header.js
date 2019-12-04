@@ -6,9 +6,11 @@ import ExpenseListFilters from './ExpenseListFilters'
 const Header = props => (
   <div>
     <Navbar collapseOnSelect expand="md" bg="dark" variant="dark">
-      <Navbar.Brand href="/" className="header__title">
-        Expentour
-      </Navbar.Brand>
+      <IndexLinkContainer to="/">
+        <Navbar.Brand href="#" className="header__title">
+          Expentour
+        </Navbar.Brand>
+      </IndexLinkContainer>
       <Form inline className="pull-right">
         <ExpenseListFilters></ExpenseListFilters>
       </Form>
