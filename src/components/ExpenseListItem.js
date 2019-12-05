@@ -1,6 +1,7 @@
 import React from 'react'
 import { Badge } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import moment from 'moment'
 
 const ExpenseListItem = ({ dispatch, id, description, amount, note, createdAt }, props) => (
   <div>
@@ -10,8 +11,19 @@ const ExpenseListItem = ({ dispatch, id, description, amount, note, createdAt },
       </Link>
     </Badge>
     <p>
-      Amount : {amount} , Date : {createdAt} , Note : {note}
+      <strong>Amount</strong> : {amount / 100} $
     </p>
+    <p>
+      <strong>Date</strong> :{' '}
+      {moment(createdAt)
+        .format('DD/MM/YYYY hh:mm:ss')
+        .toString()}
+    </p>
+    {note ? (
+      <p>
+        <strong>Note</strong> : {note}{' '}
+      </p>
+    ) : null}
   </div>
 )
 

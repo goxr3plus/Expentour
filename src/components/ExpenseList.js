@@ -2,14 +2,15 @@ import React from 'react'
 import { connect } from 'react-redux'
 import ExpenseListItem from './ExpenseListItem'
 import getVisibleExpenses from '../store/selectors/Expenses'
-import { Card, ListGroup } from 'react-bootstrap'
+import { Card, ListGroup, Form } from 'react-bootstrap'
+import ExpenseListFilters from './ExpenseListFilters'
 
 const ExpenseList = props => (
-  <Card style={{ marginLeft: '1%', width: '98%' }}>
+  <Card bg="dark" variant="dark" style={{ borderRadius: '0', paddingBottom: '15px' }}>
     <Card.Header>
-      <p> Expenses Filter : {props.filters.text} </p>
+      <ExpenseListFilters></ExpenseListFilters>
     </Card.Header>
-    <ListGroup>
+    <ListGroup style={{ marginLeft: '1%', width: '98%', marginTop: '15px' }}>
       {props.expenses.map((expense, index) => {
         return (
           <ListGroup.Item key={index}>

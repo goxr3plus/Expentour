@@ -6,7 +6,7 @@ const filtersReducerDefaultState = {
   sortBy: '',
   startDate: moment().startOf('month'),
   endDate: moment().endOf('month'),
-  calendarFocused: null
+  focusedItem: null
 }
 const filtersReducer = (state = filtersReducerDefaultState, action) => {
   switch (action.type) {
@@ -21,7 +21,7 @@ const filtersReducer = (state = filtersReducerDefaultState, action) => {
     case ActionTypes.SET_END_DATE:
       return { ...state, endDate: action.endDate }
     case ActionTypes.CALENDAR_FOCUSED_ITEM:
-      return { ...state, data }
+      return { ...state, focusedItem: action.focusedItem }
     default:
       return state
   }
