@@ -1,10 +1,13 @@
 import React from 'react'
-import { Button, Col, Container, FormControl, InputGroup, Row, Dropdown } from 'react-bootstrap'
+import { Button, Col, Container, Dropdown, FormControl, InputGroup, Row } from 'react-bootstrap'
+import { DateRangePicker } from 'react-dates'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
-import { setFilterText, sortByAmount, sortByDate } from '../store/actions/Filters'
+import { setCalendarFocused, setEndDate, setFilterText, setStartDate, sortByAmount, sortByDate } from '../store/actions/Filters'
 
 const ExpenseListFilters = props => {
+  console.log(props.filters.sortBy)
+
   const inputChangeListener = e => {
     props.dispatch(setFilterText(e.target.value))
     props.history.push('/')
@@ -12,7 +15,16 @@ const ExpenseListFilters = props => {
 
   const orderBy = e => {
     console.log(e)
-    props.dispatch(value === 'amount' ? sortByAmount() : sortByDate())
+    props.dispatch(e === 'Amount' ? sortByAmount() : sortByDate())
+  }
+
+  const setCalendarFocus = focused => {
+    props.dispatch(setCalendarFocused(focused))
+  }
+
+  const onDatesChange = ({ startDate, endDate }) => {
+    props.dispatch(setStartDate(startDate))
+    props.dispatch(setEndDate(endDate))
   }
 
   return (
@@ -42,19 +54,28 @@ const ExpenseListFilters = props => {
         <Col>
           <Dropdown value={props.filters.orderBy} onSelect={orderBy}>
             <Dropdown.Toggle variant="primary" id="dropdown-basic">
-              Order By ({props.filters.sortBy})
+              Order By
             </Dropdown.Toggle>
 
             <Dropdown.Menu>
-              <Dropdown.Item disabled href="#">
+              <Dropdown.Item eventKey="Date" active={props.filters.sortBy === 'date'}>
                 Date
               </Dropdown.Item>
-              <Dropdown.Item disabled href="#">
+              <Dropdown.Item eventKey="Amount" active={props.filters.sortBy === 'amount'}>
                 Amount
               </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
         </Col>
+        <DateRangePicker
+          startDate={props.filters.startDate}
+          startDateId="your_unique_start_date_id"
+          endDate={props.filters.endDate}
+          endDateId="your_unique_end_date_id"
+          onDatesChange={onDatesChange}
+          focusedInput={props.filters.calendarFocused}
+          onFocusChange={setCalendarFocus}
+        />
       </Row>
     </Container>
   )
