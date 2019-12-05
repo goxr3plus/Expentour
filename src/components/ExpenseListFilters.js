@@ -62,6 +62,7 @@ const ExpenseListFilters = props => {
             numberOfMonths={1}
             isOutsideRange={() => false}
             showClearDates={true}
+            displayFormat={'DD/MM/YYYY'}
           />
         </Col>
         <Col md={2} style={{ marginTop: '9px' }}>

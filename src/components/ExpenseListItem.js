@@ -14,14 +14,14 @@ const ExpenseListItem = ({ dispatch, id, description, amount, note, createdAt },
       <strong>Amount</strong> : {amount / 100} $
     </p>
     <p>
-      <strong>Date</strong> :{' '}
+      <strong>Date</strong> :
       {moment(createdAt)
         .format('DD/MM/YYYY hh:mm:ss')
         .toString()}
     </p>
     {note ? (
       <p>
-        <strong>Note</strong> : {note}{' '}
+        <strong>Note</strong> : {note}
       </p>
     ) : null}
   </div>
