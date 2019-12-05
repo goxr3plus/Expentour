@@ -13,11 +13,11 @@
 
 ### Screenshots
 
-![2019-12-03_17-05-13](https://user-images.githubusercontent.com/20374208/70062719-3f349880-15ef-11ea-9de8-450cf6f25117.gif)
+![2019-12-05_18-19-25](https://user-images.githubusercontent.com/20374208/70253384-ca4a9580-178b-11ea-8d16-b081d0fcfee3.gif)
 
 | Add Expense | Expenses
 |:-:|:-:|
-| ![chrome_2019-12-03_17-04-42](https://user-images.githubusercontent.com/20374208/70062720-4065c580-15ef-11ea-880d-b4f529d79259.png) | ![chrome_2019-12-03_17-04-33](https://user-images.githubusercontent.com/20374208/70062723-4196f280-15ef-11ea-887e-db054b584f35.png) |
+| ![chrome_2019-12-03_17-04-42](https://user-images.githubusercontent.com/20374208/70062720-4065c580-15ef-11ea-880d-b4f529d79259.png) | ![chrome_2019-12-05_18-16-26](https://user-images.githubusercontent.com/20374208/70253422-da627500-178b-11ea-946b-efaf95688a92.png) |
 
 
 
