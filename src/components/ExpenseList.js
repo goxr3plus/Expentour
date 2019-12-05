@@ -6,11 +6,11 @@ import ExpenseListFilters from './ExpenseListFilters'
 import ExpenseListItem from './ExpenseListItem'
 
 const ExpenseList = props => (
-  <Card bg="dark" variant="dark" style={{ borderRadius: '0', paddingBottom: '15px' }}>
+  <Card bg="dark" variant="dark" style={{ borderRadius: '0', paddingBottom: '15px',, height: '100%'  }}>
     <Card.Header>
       <ExpenseListFilters></ExpenseListFilters>
     </Card.Header>
-    <ListGroup style={{ marginLeft: '1%', width: '98%', marginTop: '15px' }}>
+    <ListGroup style={{ marginLeft: '1%', width: '98%', marginTop: '15px', height: '100%' }}>
       {props.expenses.length != 0 ? (
         props.expenses.map((expense, index) => {
           return (
