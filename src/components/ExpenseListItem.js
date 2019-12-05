@@ -12,14 +12,14 @@ const ExpenseListItem = ({ dispatch, id, description, amount, note, createdAt },
     </Card.Header>
     <ListGroup style={{ marginLeft: '1%', width: '98%', marginTop: '15px', height: '100%', color: 'white' }}>
       <p>
-        <strong>Amount</strong> : {amount / 100}€ <strong>Date</strong> :{' '}
+        <strong>Amount</strong>: {amount / 100}€ <strong>Date</strong>:{' '}
         {moment(createdAt)
           .format('DD/MM/YYYY')
           .toString()}
       </p>
       {note ? (
         <p>
-          <strong>Notes</strong> : {note}
+          <strong>Notes</strong>: {note}
         </p>
       ) : null}
     </ListGroup>
