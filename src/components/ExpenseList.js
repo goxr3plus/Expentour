@@ -14,7 +14,7 @@ const ExpenseList = props => (
       {props.expenses.length != 0 ? (
         props.expenses.map((expense, index) => {
           return (
-            <ListGroup.Item key={index} style={{ background: '#343a40' }}>
+            <ListGroup.Item key={index} style={{ background: '#343a40', height: '100%' }}>
               <ExpenseListItem key={index} props={props} {...expense}></ExpenseListItem>
             </ListGroup.Item>
           )
