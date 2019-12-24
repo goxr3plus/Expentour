@@ -15,15 +15,15 @@ const ExpenseList = props => (
         props.expenses.map((expense, index) => {
           return (
             <ListGroup.Item key={index} style={{ background: '#343a40', height: '100%' }}>
-              <ExpenseListItem key={index} props={props} {...expense}></ExpenseListItem>
+              <ExpenseListItem key={index} {...expense}></ExpenseListItem>
             </ListGroup.Item>
           )
         })
       ) : (
-        <Badge variant="info">
-          <h3>No Expenses Matching</h3>
-        </Badge>
-      )}
+          <Badge variant="info">
+            <h3>No Expenses Matching</h3>
+          </Badge>
+        )}
     </ListGroup>
   </Card>
 )
@@ -37,8 +37,8 @@ const mapStateToProps = state => {
 
 //export component as default
 export default //
-//what component we want our component to access from store
-connect(mapStateToProps)(
-  //connect component to store
-  ExpenseList
-)
+  //what component we want our component to access from store
+  connect(mapStateToProps)(
+    //connect component to store
+    ExpenseList
+  )

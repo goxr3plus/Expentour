@@ -72,7 +72,7 @@ export default class ExpenseForm extends Component {
 
   render() {
     return (
-      <Container style={{ background: '343a40' }}>
+      <Container style={{ background: '343a40', color: "white" }}>
         <Row>
           <Col>{this.state.error && <Alert variant="danger">{this.state.error}</Alert>}</Col>
         </Row>
