@@ -23,7 +23,7 @@
 
 # Technologies used 
 
-> Babel        (7.7.4)     [Link](https://github.com/babel/babel)
+> Babel        (7.7.7)     [Link](https://github.com/babel/babel)
 
 > React        (16.12)    [Link](https://github.com/facebook/react)
 
