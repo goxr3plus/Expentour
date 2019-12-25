@@ -33,7 +33,7 @@
 
 > SCSS  (6.0.0)     [Link](https://github.com/sass/sass)
 
-# How to run
+# How to run 
 In the package.json i have 3 scripts. You can just use :
 > npm start
 
