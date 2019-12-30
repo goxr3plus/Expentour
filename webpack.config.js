@@ -1,4 +1,5 @@
 const path = require('path')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = (env, ergs) => {
   const isProduction = env === 'production'
@@ -11,7 +12,9 @@ module.exports = (env, ergs) => {
       path: path.join(__dirname, 'public'),
       filename: 'bundle.js' //final file name
     },
-
+    //Plugins that have access to change and work with your existing
+    // Webpack build
+    plugins: [new MiniCssExtractPlugin()],
     //Customize the behaviour of webpack when it loads a specific file
     module: {
       rules: [
@@ -22,19 +25,15 @@ module.exports = (env, ergs) => {
         },
         {
           test: /\.s?css$/, // accept both css and scss
-          use: [
-            MiniCssExtractPlugin.loader,
-            //use allows as to give an array of entries
+          use: [ //use allows as to give an array of entries
             'style-loader', // creates style nodes from JS strings
+            MiniCssExtractPlugin.loader,
             'css-loader', // translates CSS into CommonJS
             'sass-loader' // compiles Sass to CSS, using Node Sass by default
           ]
         }
       ]
     },
-    //Plugins that have access to change and work with your existing
-    // Webpack build
-    plugins: [new MiniCssExtractPlugin()],
     // use dev server
     devServer: {
       contentBase: path.join(__dirname, 'public'),
