@@ -1,5 +1,4 @@
 const path = require('path')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = (env, ergs) => {
   const isProduction = env === 'production'
