@@ -8,6 +8,7 @@ import { addExpense } from './store/actions/Expenses'
 import { sortByAmount } from './store/actions/Filters'
 import ConfigureStore from './store/store'
 import './styles/style.scss'
+import './firebase/firebase'
 
 const store = ConfigureStore()
 
