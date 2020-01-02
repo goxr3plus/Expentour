@@ -1,7 +1,7 @@
 const path = require('path')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
-module.exports = (env) => {
+module.exports = env => {
   const isProduction = env === 'production'
 
   return {
@@ -9,7 +9,7 @@ module.exports = (env) => {
     devtool: isProduction ? 'source-map' : 'cheap-module-eval-source-map', // show original source code so we don't get lost inside bundle.js when errors happen
     entry: './src/app.js', //which file to use as entry
     output: {
-      path: path.join(__dirname, 'public'),
+      path: path.join(__dirname, 'public', 'dist'),
       filename: 'bundle.js' //final file name
     },
     //Plugins that have access to change and work with your existing
@@ -25,7 +25,8 @@ module.exports = (env) => {
         },
         {
           test: /\.s?css$/, // accept both css and scss
-          use: [ //use allows as to give an array of entries
+          use: [
+            //use allows as to give an array of entries
             'style-loader', // creates style nodes from JS strings
             MiniCssExtractPlugin.loader,
             'css-loader', // translates CSS into CommonJS
@@ -40,7 +41,8 @@ module.exports = (env) => {
       watchContentBase: true, //Live Reload on file change
       compress: false, //compress bundle.js
       port: 9000, //final application running port [localhost:9000]
-      historyApiFallback: true //We gonna handle routing from client side
+      historyApiFallback: true, //We gonna handle routing from client side
+      publicPath: '/dist/'
     }
   }
 }

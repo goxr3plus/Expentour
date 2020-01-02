@@ -1,7 +1,4 @@
 node_modules/*
 .idea/*
 package-lock.json
-public/bundle.js
-public/bundle.js.map
-public/main.css
-public/main.css.map
+public/dist/*

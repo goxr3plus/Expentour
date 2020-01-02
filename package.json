@@ -4,15 +4,14 @@
   "version": "1.0.1",
   "main": "index.js",
   "scripts": {
-    "start_local": "run-p dev-server build:prod",
     "run-p": "npm-run-all -p ",
     "dev-server": "webpack-dev-server",
     "build:dev": "webpack",
     "build:prod": "webpack -p --env production",
     "reinstall": "rm -rf node_modules & npm i",
+    "start_local": "run-p dev-server build:prod",
     "start": "node server/server.js",
-    "heroku-postbuild":"npm run build:prod"
-
+    "heroku-postbuild": "npm run build:prod"
   },
   "author": "GOXR3PLUS STUDIO",
   "license": "GNU 3",
