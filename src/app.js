@@ -6,7 +6,7 @@ import { Provider } from 'react-redux'
 import AppRouter from './routers/AppRouter'
 import { addExpense } from './store/actions/Expenses'
 import { sortByAmount } from './store/actions/Filters'
-import ConfigureStore from './store/Store'
+import ConfigureStore from './store/store'
 import './styles/style.scss'
 
 const store = ConfigureStore()
