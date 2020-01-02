@@ -1,5 +1,5 @@
 ---
-<h3 align="center" > Expentour ( <a href="https://goxr3plus.github.io/Expentour/" target="_blank">Demo</a>  ) Demo not working yet</h3>
+<h3 align="center" > Expentour ( <a href="https://expentour.herokuapp.com/" target="_blank">Website</a>  )yet</h3>
 <p align="center">
 <img src="https://user-images.githubusercontent.com/20374208/70062715-3c39a800-15ef-11ea-8eb6-0b6dbace367a.png">
 </p>
@@ -35,7 +35,7 @@
 
 # How to run 
 In the package.json i have 3 scripts. You can just use :
-> npm start
+> npm run start_local
 
 It will actually start webpack-dev-server on the port 9000(which you can configure through `wepack.config.js`) :
 
