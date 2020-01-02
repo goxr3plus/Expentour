@@ -4,9 +4,11 @@ import { Link, withRouter } from 'react-router-dom'
 import moment from 'moment'
 import { connect } from 'react-redux'
 import { removeExpense } from '../store/actions/Expenses'
+import numbro from 'numbro'
 
 const ExpenseListItem = props => {
   const { id, description, amount, note, createdAt } = props
+  const amountFormated = numbro(amount / 100).format({ thousandSeparated: true })
 
   return (
     <Card bg="dark" style={{ height: '100%' }}>
@@ -17,7 +19,7 @@ const ExpenseListItem = props => {
       </Card.Header>
       <ListGroup style={{ marginLeft: '1%', width: '98%', marginTop: '15px', height: '100%', color: 'white' }}>
         <p>
-          <strong>Amount</strong>: {amount / 100}€ <strong>Date</strong>:{' '}
+          <strong>Amount</strong>: {amountFormated}€ <strong>Date</strong>:{' '}
           {moment(createdAt)
             .format('DD/MM/YYYY')
             .toString()}
