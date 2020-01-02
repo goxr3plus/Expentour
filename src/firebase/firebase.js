@@ -15,9 +15,23 @@ const firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig)
 
-firebase
-  .database()
-  .ref()
-  .set({
-    name: 'GOXR3PLUS STUDIO'
-  })
+const database = firebase.database()
+database.ref().set({
+  name: 'GOXR3PLUS STUDIO',
+  age: 26,
+  isSingle: true,
+  location: {
+    city: 'Florida',
+    country: 'United States'
+  }
+})
+
+// database.ref().set('This is my data')
+
+database.ref('age').set(28)
+database.ref('location/city').set('California')
+
+database.ref('attributes').set({
+  height: 73,
+  weight: 180
+})
