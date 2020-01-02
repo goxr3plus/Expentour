@@ -3,16 +3,13 @@ import { Card, ListGroup, Button } from 'react-bootstrap'
 import { Link, withRouter } from 'react-router-dom'
 import moment from 'moment'
 import { connect } from 'react-redux'
-import { removeExpense } from '../store/actions/Expenses';
+import { removeExpense } from '../store/actions/Expenses'
 
-
-const ExpenseListItem = (props) => {
+const ExpenseListItem = props => {
   const { id, description, amount, note, createdAt } = props
 
   return (
-
-    < Card bg="dark" style={{ height: '100%' }
-    }>
+    <Card bg="dark" style={{ height: '100%' }}>
       <Card.Header>
         <Link to={`/edit/${id}`} style={{ color: '#dc3545' }}>
           <strong>{description}</strong>
@@ -39,18 +36,19 @@ const ExpenseListItem = (props) => {
             }}
           >
             Delete
-      </Button>
+          </Button>
           <Button
+            style={{ marginLeft: '5px' }}
             variant="info"
             onClick={e => {
               props.history.push(`/edit/${id}`)
             }}
           >
             Edit
-      </Button>
+          </Button>
         </div>
       </ListGroup>
-    </Card >
+    </Card>
   )
 }
 
