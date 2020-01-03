@@ -20,6 +20,19 @@ export const startAddExpense = (expenseData = {}) => dispatch => {
     .catch(e => console.log('An error happened bro'))
 }
 
+export const getAllExpenses = () => dispatch => {
+  database.ref('expenses').once(
+    'value',
+    snapshot => {
+      console.log(snapshot.val())
+      snapshot.forEach(expense => {
+        dispatch(addExpense({ id: expense.key, ...expense.val() }))
+      })
+    },
+    e => console.log('An error happened bro')
+  )
+}
+
 //----------------- SYNCHRONOUS ACTIONS ------------------------
 export const addExpense = expense => ({
   type: EXPENSE_ADD,
