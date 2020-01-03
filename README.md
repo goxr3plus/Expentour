@@ -45,15 +45,25 @@ It will actually start `webpack-dev-server` on the port `9000` (which you can co
 
       `heroku create my-app-name-here`
 
-  5.   There you got a new remote for Heroku from now and then you can just use :
+  5.  Set Heroku Environment keys (copy pasta from `.env.development`) comma separated us you can see in the picture below :
+
+
+     ```  
+        //Pattern
+        heroku config:set KEY=VALUE 
+     ```
+![Code_2020-01-03_16-25-13](https://user-images.githubusercontent.com/20374208/71728456-ccb11580-2e45-11ea-8f6d-991ee22b9cd2.png)
+
+
+  6.   There you got a new remote for Heroku from now and then you can just use :
 
         `git push heroku master`  
 
-  6. You can view your app remote url in console or in the Heroku Dashboard :
+  7. You can view your app remote url in console or in the Heroku Dashboard :
 
   ![msedge_2020-01-03_16-04-21](https://user-images.githubusercontent.com/20374208/71727376-b9e91180-2e42-11ea-97a8-bda054567cb0.png)
 
-  7. Visit the site and get excited [Expentour](https://expentour.herokuapp.com/)
+  8. Visit the site and get excited [Expentour](https://expentour.herokuapp.com/)
 
      
 
