@@ -75,14 +75,12 @@ It will actually start `webpack-dev-server` on the port `9000` (which you can co
 ## Tutorial for Firebase
 
 As database we are using [Firebase](https://firebase.google.com/) . We are having two seperate databases ,
-one for testing and one for development/production .
+one for [`testing`](https://github.com/goxr3plus/Expentour/blob/0ecc5a62b107885220f4052a0acabc1f840cdc7a/.env.test#L9) and one for [`development/production`](https://github.com/goxr3plus/Expentour/blob/0ecc5a62b107885220f4052a0acabc1f840cdc7a/.env.development#L8) .
 
 ![image](https://user-images.githubusercontent.com/20374208/71729134-a1c7c100-2e47-11ea-92b1-a266644c5b5f.png)
 
 
-You can see the credentials at :
-
-`.env.test` and `.env.development` i left intetionally there working keys so you can run your app locally.
+You can see the credentials at : [`.env.development`](https://github.com/goxr3plus/Expentour/blob/0ecc5a62b107885220f4052a0acabc1f840cdc7a/.env.development#L8) and [`.env.test`](https://github.com/goxr3plus/Expentour/blob/0ecc5a62b107885220f4052a0acabc1f840cdc7a/.env.test#L9)  i left intetionally there working keys so you can run your app locally.
 
 How you can get your own firebase api keys for your own project ? 
 
@@ -92,7 +90,7 @@ How you can get your own firebase api keys for your own project ?
 
 ![msedge_2020-01-03_15-44-18](https://user-images.githubusercontent.com/20374208/71726625-5a8a0200-2e40-11ea-8152-930350b8f7a3.png)
 
-4. Then there your have your new credentials which you can add on the `.env.development` or `.env.test` file :
+4. Then there your have your new credentials which you can add on the [`.env.development`](https://github.com/goxr3plus/Expentour/blob/0ecc5a62b107885220f4052a0acabc1f840cdc7a/.env.development#L8) or [`.env.test`](https://github.com/goxr3plus/Expentour/blob/0ecc5a62b107885220f4052a0acabc1f840cdc7a/.env.test#L9) file :
 
 ![2020-01-03_15-51-02](https://user-images.githubusercontent.com/20374208/71726803-e308a280-2e40-11ea-899d-43e4c2a85a31.gif)
 
