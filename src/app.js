@@ -12,11 +12,11 @@ import './firebase/firebase'
 
 const store = ConfigureStore()
 
-store.dispatch(addExpense({ description: 'Water bill', amount: 4500, note: 'LALA' }))
-store.dispatch(addExpense({ description: 'Gas bill', createdAt: 1000 }))
-store.dispatch(addExpense({ description: 'Rent bill', amount: 109500 }))
-store.dispatch(addExpense({ description: 'House rent', amount: 1029500 }))
-store.dispatch(sortByAmount())
+// store.dispatch(addExpense({ description: 'Water bill', amount: 4500, note: 'LALA' }))
+// store.dispatch(addExpense({ description: 'Gas bill', createdAt: 1000 }))
+// store.dispatch(addExpense({ description: 'Rent bill', amount: 109500 }))
+// store.dispatch(addExpense({ description: 'House rent', amount: 1029500 }))
+// store.dispatch(sortByAmount())
 
 const jsx = (
   <Provider store={store}>
