@@ -1,5 +1,4 @@
-import * as ActionTypes from '../actions/ActionTypes'
-import moment from 'moment'
+import * as ActionTypes from '../actions/Filters'
 
 const filtersReducerDefaultState = {
   text: '',

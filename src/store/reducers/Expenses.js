@@ -1,4 +1,4 @@
-import * as ActionTypes from '../actions/ActionTypes'
+import * as ActionTypes from '../actions/Expenses'
 
 //   expenses: [
 //     {
@@ -13,11 +13,11 @@ const expensesReducerDefaultState = []
 const expensesReducer = (state = expensesReducerDefaultState, action) => {
   const type = action.type
   switch (type) {
-    case ActionTypes.ADD_EXPENSE:
+    case ActionTypes.EXPENSE_ADD:
       return [...state, action.expense]
-    case ActionTypes.REMOVE_EXPENSE:
+    case ActionTypes.EXPENSE_REMOVE:
       return state.filter(({ id }) => id !== action.id)
-    case ActionTypes.EDIT_EXPENSE:
+    case ActionTypes.EXPENSE_EDIT:
       return state.map(expense => {
         //matching id
         if (expense.id === action.id) {

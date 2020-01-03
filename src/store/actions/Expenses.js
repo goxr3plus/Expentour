@@ -1,8 +1,13 @@
-import * as ActionTypes from './ActionTypes'
 import uuid from 'uuid'
 
+//----------------- ACTION TYPES ------------------------
+export const EXPENSE_ADD = 'ADD_EXPENSE'
+export const EXPENSE_REMOVE = 'REMOVE_EXPENSE'
+export const EXPENSE_EDIT = 'EDIT_EXPENSE'
+
+//----------------- SYNCHRONOUS ACTIONS ------------------------
 export const addExpense = ({ description = '', note = '', amount = 0, createdAt = 0 } = {}) => ({
-  type: ActionTypes.ADD_EXPENSE,
+  type: EXPENSE_ADD,
   expense: {
     id: uuid(),
     description,
@@ -13,12 +18,12 @@ export const addExpense = ({ description = '', note = '', amount = 0, createdAt 
 })
 
 export const removeExpense = ({ id } = {}) => ({
-  type: ActionTypes.REMOVE_EXPENSE,
+  type: EXPENSE_REMOVE,
   id
 })
 
 export const editExpense = ({ id, updates } = {}) => ({
-  type: ActionTypes.EDIT_EXPENSE,
+  type: EXPENSE_EDIT,
   id,
   updates
 })
