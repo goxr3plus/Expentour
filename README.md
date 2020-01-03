@@ -77,6 +77,9 @@ It will actually start `webpack-dev-server` on the port `9000` (which you can co
 As database we are using [Firebase](https://firebase.google.com/) . We are having two seperate databases ,
 one for testing and one for development/production .
 
+![image](https://user-images.githubusercontent.com/20374208/71729134-a1c7c100-2e47-11ea-92b1-a266644c5b5f.png)
+
+
 You can see the credentials at :
 
 `.env.test` and `.env.development` i left intetionally there working keys so you can run your app locally.
