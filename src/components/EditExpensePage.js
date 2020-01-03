@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button } from 'react-bootstrap'
 import { connect } from 'react-redux'
-import { editExpense, removeExpense } from '../store/actions/Expenses'
+import { editExpense, removeExpense } from '../actions/Expenses'
 import ExpenseForm from './ExpenseForm'
 
 const EditExpensePage = props => {

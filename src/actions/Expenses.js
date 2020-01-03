@@ -1,5 +1,5 @@
 import uuid from 'uuid'
-import database from '../../firebase/firebase'
+import database from '../firebase/firebase'
 
 //----------------- ACTION TYPES ------------------------
 export const EXPENSE_ADD = 'ADD_EXPENSE'
@@ -15,7 +15,7 @@ export const startAddExpense = (expenseData = {}) => dispatch => {
     .ref('expenses')
     .push(expense)
     .then(ref => {
-      addExpense({ id: ref.key, ...expense })
+      dispatch(addExpense({ id: ref.key, ...expense }))
     })
     .catch(e => console.log('An error happened bro'))
 }

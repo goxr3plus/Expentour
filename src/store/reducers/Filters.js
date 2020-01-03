@@ -1,4 +1,4 @@
-import * as ActionTypes from '../actions/Filters'
+import * as ActionTypes from '../../actions/Filters'
 
 const filtersReducerDefaultState = {
   text: '',

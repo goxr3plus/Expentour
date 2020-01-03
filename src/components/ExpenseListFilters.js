@@ -3,7 +3,7 @@ import { Button, Col, Container, Dropdown, FormControl, InputGroup, Row } from '
 import { DateRangePicker } from 'react-dates'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
-import { setFocusedItem, setEndDate, setFilterText, setStartDate, sortByAmount, sortByDate } from '../store/actions/Filters'
+import { setFocusedItem, setEndDate, setFilterText, setStartDate, sortByAmount, sortByDate } from '../actions/Filters'
 
 const ExpenseListFilters = props => {
   console.log(props.filters.sortBy)

@@ -11,9 +11,10 @@
 
 ---
 
-| Add Expense | Expenses
+| Expenses | Add Expense
 |:-:|:-:|
-| ![chrome_2019-12-03_17-04-42](https://user-images.githubusercontent.com/20374208/70062720-4065c580-15ef-11ea-880d-b4f529d79259.png) | ![chrome_2019-12-05_18-16-26](https://user-images.githubusercontent.com/20374208/70253422-da627500-178b-11ea-946b-efaf95688a92.png) |
+| ![msedge_2020-01-03_16-18-43](https://user-images.githubusercontent.com/20374208/71728053-c40c0f80-2e44-11ea-8715-8e5d2a68509f.png) | ![msedge_2020-01-03_16-18-53](https://user-images.githubusercontent.com/20374208/71728054-c53d3c80-2e44-11ea-8ac3-f397cdbc240c.png)
+ |
 
 
 # How start the application

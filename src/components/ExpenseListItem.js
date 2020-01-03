@@ -3,7 +3,7 @@ import { Card, ListGroup, Button } from 'react-bootstrap'
 import { Link, withRouter } from 'react-router-dom'
 import moment from 'moment'
 import { connect } from 'react-redux'
-import { removeExpense } from '../store/actions/Expenses'
+import { removeExpense } from '../actions/Expenses'
 import numbro from 'numbro'
 
 const ExpenseListItem = props => {
