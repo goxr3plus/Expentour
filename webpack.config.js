@@ -5,6 +5,7 @@ const webpack = require('webpack')
 //CHECK THE ENVIRONMENT
 
 process.env.NODE_ENV = process.env.NODE_ENV || 'development'
+
 console.log('Environment :', process.env.NODE_ENV)
 if (process.env.NODE_ENV === 'test') {
   require('dotenv').config({ path: '.env.test' })
@@ -14,7 +15,7 @@ if (process.env.NODE_ENV === 'test') {
 
 //MODULE EXPORTS
 module.exports = env => {
-  const isProduction = env === 'production'
+  const isProduction = process.env.NODE_ENV === 'production'
 
   return {
     // mode: 'development', //mode [development,production,...]
