@@ -30,7 +30,7 @@ It will actually start `webpack-dev-server` on the port `9000` (which you can co
 
 ## Tutorial on how to deploy in Heroku
   
-  1. You have to create an account.
+  1. You have to create an account. 
 
   ![image](https://user-images.githubusercontent.com/20374208/71727446-edc43700-2e42-11ea-8852-4555a5824b9a.png)
 
