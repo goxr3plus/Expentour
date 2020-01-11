@@ -28,7 +28,7 @@ It will actually start `webpack-dev-server` on the port `9000` (which you can co
 
 2 To run the application on production mode i have used [Heroku](https://dashboard.heroku.com/) .
 
-## Tutorial on how to deploy in Heroku
+## Tutorial on how to deploy in Heroku 
   
   1. You have to create an account. 
 
