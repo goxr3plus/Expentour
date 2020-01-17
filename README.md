@@ -11,7 +11,7 @@
 
 ---
 
-| Expenses | Add Expense 
+| Expenses | Add Expense  
 |:-:|:-:|
 | ![msedge_2020-01-03_16-18-43](https://user-images.githubusercontent.com/20374208/71728053-c40c0f80-2e44-11ea-8715-8e5d2a68509f.png) | ![msedge_2020-01-03_16-18-53](https://user-images.githubusercontent.com/20374208/71728054-c53d3c80-2e44-11ea-8ac3-f397cdbc240c.png)
  |
