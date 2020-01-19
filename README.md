@@ -20,7 +20,7 @@
 # How start the application  
 
 1 To run the application locally in development you can use :
-> npm run start_local
+> npm run start_local 
 
 It will actually start `webpack-dev-server` on the port `9000` (which you can configure through `wepack.config.js`) :
 
