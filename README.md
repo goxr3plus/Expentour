@@ -2,35 +2,35 @@
 <h3 align="center" > Expentour ( <a href="https://expentour.herokuapp.com/" target="_blank">Demo</a>  )</h3>
 <p align="center">
 <img src="https://user-images.githubusercontent.com/20374208/70062715-3c39a800-15ef-11ea-8eb6-0b6dbace367a.png">
-</p>
-<p align="center">
-<sup> 
+</p> 
+<p align="center">  
+<sup>  
 <b>Calculate Expenses </b>
-</sup>
-</p>
-
+</sup> 
+</p> 
+ 
 ---
 
-| Expenses | Add Expense
+| Expenses | Add Expense  
 |:-:|:-:|
 | ![msedge_2020-01-03_16-18-43](https://user-images.githubusercontent.com/20374208/71728053-c40c0f80-2e44-11ea-8715-8e5d2a68509f.png) | ![msedge_2020-01-03_16-18-53](https://user-images.githubusercontent.com/20374208/71728054-c53d3c80-2e44-11ea-8ac3-f397cdbc240c.png)
  |
 
 
-# How start the application
+# How start the application   
+ 
+1 To run the application locally in development you can use :  
+> npm run start_local 
 
-1 To run the application locally in development you can use :
-> npm run start_local
-
-It will actually start `webpack-dev-server` on the port `9000` (which you can configure through `wepack.config.js`) :
-
+It will actually start `webpack-dev-server` on the port `9000` (which you can convfigure through `wepack.config.js`) :
+ 
 > http://127.0.0.1:9000/
 
 2 To run the application on production mode i have used [Heroku](https://dashboard.heroku.com/) .
 
-## Tutorial on how to deploy in Heroku
+## Tutorial on how to deploy in Heroku  
   
-  1. You have to create an account.
+  1. You have to create an account. 
 
   ![image](https://user-images.githubusercontent.com/20374208/71727446-edc43700-2e42-11ea-8852-4555a5824b9a.png)
 
