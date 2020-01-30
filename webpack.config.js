@@ -14,7 +14,7 @@ if (process.env.NODE_ENV === 'test') {
 }
 
 //MODULE EXPORTS
-module.exports = env => {
+module.exports = () => {
   const isProduction = process.env.NODE_ENV === 'production'
 
   return {
