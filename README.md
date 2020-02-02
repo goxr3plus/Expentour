@@ -1,4 +1,4 @@
----
+   ---
 <h3 align="center" > Expentour ( <a href="https://expentour.herokuapp.com/" target="_blank">Demo</a>  )</h3>
 <p align="center">
 <img src="https://user-images.githubusercontent.com/20374208/70062715-3c39a800-15ef-11ea-8eb6-0b6dbace367a.png">
@@ -19,7 +19,7 @@
 
 # How start the application    
  
-1 To run the application locally in development you can use :  
+1 To run the application locally in development you can use :   
 > npm run start_local 
 
 It will actually start `webpack-dev-server` on the port `9000` (which you can convfigure through `wepack.config.js`) :
