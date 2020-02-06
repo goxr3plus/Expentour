@@ -102,11 +102,11 @@ How you can get your own firebase api keys for your own project ?
 
 > Firebase       (7.6.1)     [Link](https://github.com/firebase/firebase-js-sdk)
 
-> Babel          (7.7.7)     [Link](https://github.com/babel/babel)
+> Babel          (7.8.1)     [Link](https://github.com/babel/babel)
 
 > React          (16.12)    [Link](https://github.com/facebook/react)
 
-> Webpack        (4.41)    [Link](https://github.com/webpack/webpack)
+> Webpack        (4.41.5)    [Link](https://github.com/webpack/webpack)
 
 > Bootstrap      (4)    [Link](https://react-bootstrap.github.io/getting-started/introduction/)
 
