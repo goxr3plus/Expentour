@@ -5,7 +5,7 @@
 </p>  
 <p align="center">     
 <sup>  
-<b>Calculate Expenses </b>   
+<b>Calculate Expenses </b>    
 </sup> 
 </p> 
  
