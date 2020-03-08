@@ -6,7 +6,7 @@
 <img src="https://user-images.githubusercontent.com/20374208/70062715-3c39a800-15ef-11ea-8eb6-0b6dbace367a.png">
 </p>  
 <p align="center">     
-<sup>   
+<sup>    
 <b>Calculate Expenses </b>        
 </sup>   
 </p> 
