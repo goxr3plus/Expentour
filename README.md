@@ -4,7 +4,7 @@
 <h3 align="center" > Expentour ( <a href="https://expentour.herokuapp.com/" target="_blank">Demo</a>  )</h3>   
 <p align="center">    
 <img src="https://user-images.githubusercontent.com/20374208/70062715-3c39a800-15ef-11ea-8eb6-0b6dbace367a.png">
-</p>  
+</p>   
 <p align="center">         
 <sup>               
 <b>Calculate Expenses </b>                         
