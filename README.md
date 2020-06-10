@@ -9,7 +9,7 @@
 <sup>                  
 <b>Calculate Expenses </b>                              
 </sup>               
-</p>        
+</p>         
      
 ---    
   
