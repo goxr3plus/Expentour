@@ -8,7 +8,7 @@
 <p align="center">            
 <sup>                   
 <b>Calculate Expenses </b>                                 
-</sup>                     
+</sup>                      
 </p>         
         
 ---     
@@ -20,7 +20,7 @@
     
    
 # How start the application         
-    
+     
 1 To run the application locally in development you can use :      
 > npm run start_local   
 
