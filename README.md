@@ -19,7 +19,7 @@
  |
     
     
-# How start the application          
+# How start the application           
        
 1 To run the application locally in development you can use  :       
 > npm run start_local   
